@@ -1,5 +1,7 @@
 import { Container, Nav, Navbar, Image, Button } from "react-bootstrap";
 import { Link } from "react-scroll";
+import logo from "../assets/img/logo_name.png";
+
 export default function Nav_bar() {
   return (
     <Navbar
@@ -12,7 +14,7 @@ export default function Nav_bar() {
         <Link to="home">
           <Navbar.Brand href="#home">
             <Image
-              src="src\assets\img\logo_name.png"
+              src={logo}
               className="img-fluid"
               style={{ width: "180px" }}
             />

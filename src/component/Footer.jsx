@@ -1,4 +1,5 @@
 import { Col, Image, Row, Stack } from "react-bootstrap";
+import logo from "../assets/img/logo_name.png";
 
 export default function Footer() {
   return (
@@ -10,11 +11,7 @@ export default function Footer() {
           sm={12}
         >
           <Stack>
-            <Image
-              src="src\assets\img\logo_name.png"
-              fluid
-              style={{ width: "23rem" }}
-            />
+            <Image src={logo} fluid style={{ width: "23rem" }} />
 
             <p className="mt-4 ms-2 me-3">
               Connect, Collaborate, and Learn Smarter with AI-Powered Tools.

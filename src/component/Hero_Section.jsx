@@ -11,6 +11,7 @@ import {
 import { useState } from "react";
 import addEmailToWaitlist from "../functions/signup";
 import { Element } from "react-scroll";
+import hero from "../assets/img/image.jpeg";
 
 export default function Hero_Section() {
   const [email, setEmail] = useState("");
@@ -68,7 +69,7 @@ export default function Hero_Section() {
           md={6}
           sm={12}
         >
-          <Image src="src/assets/img/image.jpeg" fluid />
+          <Image src={hero} fluid />
         </Col>
       </Row>
     </Element>
