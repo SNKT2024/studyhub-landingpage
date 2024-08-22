@@ -2,17 +2,23 @@ import { useState } from "react";
 import { Button, Col, Form, InputGroup, Row, Stack } from "react-bootstrap";
 import addEmailToWaitlist from "../functions/signup";
 import { Element } from "react-scroll";
+import SuccessModal from "./succesModal";
 
 export default function SignUp_Page() {
   const [email, setEmail] = useState("");
+  const [showModal, setShowModal] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email) {
       addEmailToWaitlist(email);
       setEmail("");
+      setShowModal(true);
     }
   };
+
+  const handleClose = () => setShowModal(false);
+
   return (
     <Element name="signup">
       <Row style={{ height: "70vh" }} className="">
@@ -59,6 +65,7 @@ export default function SignUp_Page() {
             </Form>
           </Stack>
         </Col>
+        <SuccessModal show={showModal} handleClose={handleClose} />
       </Row>
     </Element>
   );

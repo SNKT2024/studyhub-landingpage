@@ -4,7 +4,11 @@ import logo from "../assets/img/logo_name.png";
 export default function Footer() {
   return (
     <>
-      <Row style={{ height: "30vh" }} className="d-flex align-items-center">
+      <Row
+        style={{ height: "30vh" }}
+        className="d-flex align-items-center"
+        id="footer"
+      >
         <Col
           className="d-flex align-items-center justify-content-center"
           md={6}

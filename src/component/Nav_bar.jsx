@@ -9,30 +9,24 @@ export default function Nav_bar() {
       expand="lg"
       className="bg-body-tertiary"
       sticky="top"
+      id="home"
     >
       <Container style={{ minHeight: "5rem" }} fluid>
-        <Link to="home">
-          <Navbar.Brand href="#home">
-            <Image
-              src={logo}
-              className="img-fluid"
-              style={{ width: "180px" }}
-            />
-          </Navbar.Brand>
-        </Link>
+        <Navbar.Brand href="#home">
+          <Image src={logo} className="img-fluid" style={{ width: "180px" }} />
+        </Navbar.Brand>
+
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
-            <Link to="hero" smooth duration={100}>
-              <Nav.Link href="" className="me-3">
-                Home
-              </Nav.Link>
-            </Link>
-            <Link to="feature">
-              <Nav.Link href="" className="me-3">
-                Features
-              </Nav.Link>
-            </Link>
+            <Nav.Link href="#hero" className="me-3">
+              Home
+            </Nav.Link>
+
+            <Nav.Link href="#features" className="me-3">
+              Features
+            </Nav.Link>
+
             <Link to="signup">
               <Button style={{ width: "6rem" }} className="rounded-pill">
                 Join

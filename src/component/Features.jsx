@@ -5,7 +5,6 @@ import studyRec from "../assets/img/studyRec.jpeg";
 import sched from "../assets/img/schdule.jpeg";
 import note from "../assets/img/note.jpeg";
 import roadmap from "../assets/img/roadmpa (3).jpeg";
-import { Link } from "react-scroll";
 
 // Define the features array
 const features = [
@@ -49,58 +48,60 @@ const features = [
 // Features component
 function Features({ heading, description, reverse, img }) {
   return (
-    <Link name="feature">
-      <Row style={{ height: "100vh" }} className="d-flex align-items-center">
-        {reverse ? (
-          <>
-            <Col
-              className="d-flex align-items-center justify-content-center"
-              md={6}
-              sm={12}
-              xs={{ order: "first" }}
-            >
-              <Image src={img} fluid />
-            </Col>
-            <Col
-              className="d-flex align-items-center justify-content-center"
-              md={6}
-              sm={12}
-            >
-              <Stack gap={3}>
-                <h1 className="mb-4" style={{ fontWeight: "700" }}>
-                  {heading}
-                </h1>
-                <p>{description}</p>
-              </Stack>
-            </Col>
-          </>
-        ) : (
-          <>
-            <Col
-              className="d-flex align-items-center justify-content-center"
-              md={6}
-              sm={12}
-            >
-              <Stack gap={3}>
-                <h1 className="mb-4" style={{ fontWeight: "700" }}>
-                  {heading}
-                </h1>
-                <p>{description}</p>
-              </Stack>
-            </Col>
-            <Col
-              className="d-flex align-items-center justify-content-center"
-              md={6}
-              sm={12}
-              lg={{ order: "last" }}
-              xs={{ order: "first" }}
-            >
-              <Image src={img} fluid />
-            </Col>
-          </>
-        )}
-      </Row>
-    </Link>
+    <Row
+      style={{ height: "100vh" }}
+      className="d-flex align-items-center"
+      id="features"
+    >
+      {reverse ? (
+        <>
+          <Col
+            className="d-flex align-items-center justify-content-center"
+            md={6}
+            sm={12}
+            xs={{ order: "first" }}
+          >
+            <Image src={img} fluid />
+          </Col>
+          <Col
+            className="d-flex align-items-center justify-content-center"
+            md={6}
+            sm={12}
+          >
+            <Stack gap={3}>
+              <h1 className="mb-4" style={{ fontWeight: "700" }}>
+                {heading}
+              </h1>
+              <p>{description}</p>
+            </Stack>
+          </Col>
+        </>
+      ) : (
+        <>
+          <Col
+            className="d-flex align-items-center justify-content-center"
+            md={6}
+            sm={12}
+          >
+            <Stack gap={3}>
+              <h1 className="mb-4" style={{ fontWeight: "700" }}>
+                {heading}
+              </h1>
+              <p>{description}</p>
+            </Stack>
+          </Col>
+          <Col
+            className="d-flex align-items-center justify-content-center"
+            md={6}
+            sm={12}
+            lg={{ order: "last" }}
+            xs={{ order: "first" }}
+          >
+            <Image src={img} fluid />
+          </Col>
+        </>
+      )}
+    </Row>
   );
 }
 

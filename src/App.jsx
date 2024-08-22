@@ -5,20 +5,23 @@ import Hero_Section from "./component/Hero_Section";
 import FeaturesList from "./component/Features";
 import SignUp_Page from "./component/SignUp";
 import Footer from "./component/Footer";
-import { Element } from "react-scroll";
+import { analytics } from "./firebaseConfig";
+import { logEvent } from "firebase/analytics";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    logEvent(analytics, "notification_received");
+  }, []);
   return (
     <>
-      <Element name="home">
-        <Container>
-          <Nav_bar />
-          <Hero_Section />
-          <FeaturesList />
-          <SignUp_Page />
-          <Footer />
-        </Container>
-      </Element>
+      <Container>
+        <Nav_bar />
+        <Hero_Section />
+        <FeaturesList />
+        <SignUp_Page />
+        <Footer />
+      </Container>
     </>
   );
 }
