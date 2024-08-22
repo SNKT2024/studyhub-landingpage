@@ -11,7 +11,7 @@ import {
 import { useState } from "react";
 import addEmailToWaitlist from "../functions/signup";
 import hero from "../assets/img/image.jpeg";
-import SuccessModal from "./succesModal";
+import SuccessModal from "./SuccesModal";
 
 export default function Hero_Section() {
   const [email, setEmail] = useState("");
